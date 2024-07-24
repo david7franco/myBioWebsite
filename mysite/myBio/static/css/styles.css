@@ -1,90 +1,53 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f0f8ff;
-}
-
-header {
-    background: linear-gradient(to bottom, #ffa500, #ff7f50);
-    background-size: cover;
-    color: #000000;
-}
-
-header h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    color: #000000;
-}
-
-header p {
-    font-size: 1.5rem;
-    margin-bottom: 0;
-}
-
-.navbar {
-    background-color: #000000;
+/* Custom Navbar */
+.custom-navbar {
+    padding: 1.5rem 1rem; /* Increase the padding for a larger navbar */
+    background: linear-gradient(to right, #3a3a3a, #4f4f4f); /* Grey gradient */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add depth with a box shadow */
 }
 
 .navbar-brand, .nav-link {
-    color: #000000 !important;
+    font-size: 1.25rem; /* Increase the font size */
+    color: #e0e0e0 !important; /* Set the text color to light grey */
 }
 
-.navbar-brand:hover, .nav-link:hover {
-    color: #ffa500 !important;
+/* Custom Body Background */
+body {
+    background-color: #2a2a2a; /* Dark grey background */
+    color: #e0e0e0; /* Light text color for readability */
 }
 
+/* Custom Header */
+header {
+    background: linear-gradient(to right, #3a3a3a, #4f4f4f); /* Grey gradient */
+    color: #e0e0e0;
+}
+
+/* Custom Sections */
 section {
-    padding: 60px 0;
+    padding: 4rem 0;
+    background-color: #2a2a2a; /* Match the body background color */
+    color: #e0e0e0; /* Light text color for readability */
 }
 
-section h2 {
-    font-size: 2.5rem;
-    color: #ffa500;
-    text-align: center;
-    margin-bottom: 30px;
+section.bg-light {
+    background-color: #3a3a3a; /* Slightly lighter dark background */
+    color: #e0e0e0; /* Light text color for readability */
 }
 
-section p {
-    color: #ffa500;
-    font-size: 1.2rem;
-    text-align: center;
+/* Carousel */
+.carousel-inner img {
+    width: 100%;
+    height: auto;
 }
 
+/* Card */
 .card {
-    border: none;
-    border-radius: 10px;
+    background-color: #3a3a3a; /* Match the bg-light color */
+    color: #e0e0e0; /* Light text color for readability */
 }
 
-.card-title {
-    color: #ffa500;
-    text-align: center;
-}
-
-.card-text {
-    color: #ffa500;
-    text-align: center;
-}
-
-.form-control {
-    border-radius: 10px;
-}
-
-.btn-primary {
-    background-color: #ffa500;
-    border-color: #ffa500;
-}
-
-.btn-primary:hover {
-    background-color: #ff7f50;
-    border-color: #ff7f50;
-}
-
+/* Footer */
 footer {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 20px 0;
-}
-
-footer p {
-    margin: 0;
-    color: #ffa500;
+    background-color: #3a3a3a;
+    color: #e0e0e0;
 }
