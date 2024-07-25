@@ -1,53 +1,83 @@
-/* Custom Navbar */
 .custom-navbar {
-    padding: 1.5rem 1rem; /* Increase the padding for a larger navbar */
-    background: linear-gradient(to right, #3a3a3a, #4f4f4f); /* Grey gradient */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add depth with a box shadow */
+    padding: 1.5rem 1rem; 
+    background: linear-gradient(to right, #0B0C10, #1F2833); 
+    box-shadow: 0 4px 8px rgba(254, 254, 254, 0.1); 
 }
 
 .navbar-brand, .nav-link {
-    font-size: 1.25rem; /* Increase the font size */
-    color: #e0e0e0 !important; /* Set the text color to light grey */
+    font-size: 1.25rem; 
+    color: #e0e0e0 !important; 
 }
 
-/* Custom Body Background */
 body {
-    background-color: #2a2a2a; /* Dark grey background */
-    color: #e0e0e0; /* Light text color for readability */
-}
-
-/* Custom Header */
-header {
-    background: linear-gradient(to right, #3a3a3a, #4f4f4f); /* Grey gradient */
+    background: linear-gradient(to right, #0B0C10, #1F2833); 
     color: #e0e0e0;
 }
 
+
+header {
+    background: linear-gradient(to right, #0B0C10, #1F2833); 
+}
+ .box-shadow {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
 /* Custom Sections */
 section {
     padding: 4rem 0;
-    background-color: #2a2a2a; /* Match the body background color */
-    color: #e0e0e0; /* Light text color for readability */
+    background: linear-gradient(to right, #0B0C10, #1F2833); 
+    color: #e0e0e0; 
 }
 
 section.bg-light {
-    background-color: #3a3a3a; /* Slightly lighter dark background */
-    color: #e0e0e0; /* Light text color for readability */
+    background-color: #3a3a3a;
+    color: #e0e0e0; 
 }
-
 /* Carousel */
 .carousel-inner img {
     width: 100%;
-    height: auto;
+    height: 650px;
+
 }
 
-/* Card */
-.card {
-    background-color: #3a3a3a; /* Match the bg-light color */
-    color: #e0e0e0; /* Light text color for readability */
+section.bg-light h2 {
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+section.bg-light h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background: linear-gradient(to right, #e0e0e0, #742a2a); /* Adjust colors as needed */
+    bottom: 0;
+    left: 25%;
 }
 
-/* Footer */
-footer {
+ .project_container {
+    text-align: center;
+    padding: 10px;
+}
+ .card {
+    padding: 5px;
     background-color: #3a3a3a;
-    color: #e0e0e0;
+    color: #e0e0e0; 
+}
+.card-body {
+    text-align: center;
+}
+
+.card-img-top {
+    transition: box-shadow 0.3s ease-in-out;
+ }
+
+.card-img-top:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+ }
+/* Footer */
+.custom-footer {
+    background: linear-gradient(to right, #0B0C10, #000000);
+    box-shadow: 5px 5px 10px rgb(255, 255, 255);
+    position: relative;
+    z-index: 2;
 }

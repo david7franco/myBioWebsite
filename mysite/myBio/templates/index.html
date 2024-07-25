@@ -1,47 +1,11 @@
-<!DOCTYPE html>
-{%load static%}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg custom-navbar">
-        <a class="navbar-brand text-white" href="#">My Website</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+{% extends 'base.html' %}
+{% load static %}
 
-
-    <header class="bg-primary text-white text-center py-5">
+{% block content %}
+    <header class="bg-primary text-white text-center py-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
         <div class="container">
-            <h1>Welcome to My Personal Website</h1>
-            <p class="lead">A place where I showcase my work and share my thoughts</p>
+            <h1>Hi! I am Dave</h1>
+            <p class="lead">Here you can see some of my projects and learn a bit about me</p>
         </div>
     </header>
 
@@ -56,13 +20,13 @@
                     <div id="aboutCarousel" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="https://via.placeholder.com/500x300" class="d-block w-100" alt="Image 1">
+                                <img src="{% static '/pictures/IMG_2755.jpeg' %}" class="d-block w-100" alt="David cruise">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://via.placeholder.com/500x300" class="d-block w-100" alt="Image 2">
+                                <img src= "{% static '/pictures/IMG_7871.jpeg' %}" class="d-block w-100" alt="Image 2">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://via.placeholder.com/500x300" class="d-block w-100" alt="Image 3">
+                                <img src= "{% static '/pictures/IMG_8944.jpeg' %}" class="d-block w-100" alt="Image 3">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#aboutCarousel" role="button" data-slide="prev">
@@ -82,33 +46,39 @@
 
     <!-- Projects Section -->
     <section class="bg-light py-5">
-        <div class="container">
-            <h2>My Projects</h2>
+        <div class="container project_container">
+            <h2>Here are some of my Projects</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Project Image">
+                        <a href= "https://github.com/david7franco/ReziBo">
+                        <img src="{% static '/pictures/reziBo.png' %}" class="card-img-top" alt="Project Image">
+                        </a>
                         <div class="card-body">
-                            <h5 class="card-title">Project 1</h5>
-                            <p class="card-text">Brief description of the project.</p>
+                            <h5 class="card-title">ReziBo</h5>
+                            <p class="card-text">A Task Manager Web Application developed with Django</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Project Image">
+                        <a href= "https://www.iglesia-solideogloria.org/">
+                        <img src="{% static '/pictures/ChurchBanner.png' %}"class="card-img-top" alt="Project Image">
+                        </a>
                         <div class="card-body">
-                            <h5 class="card-title">Project 2</h5>
-                            <p class="card-text">Brief description of the project.</p>
+                            <h5 class="card-title">Iglesia Soli Deo Gloria</h5>
+                            <p class="card-text">A church website I helped create</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Project Image">
+                        <a href="https://github.com/david7franco/PS4CS" target="_blank">
+                        <img src="{% static '/pictures/PremierLeagueProject.png' %}" class="card-img-top" alt="Project Image">
+                        </a>
                         <div class="card-body">
-                            <h5 class="card-title">Project 3</h5>
-                            <p class="card-text">Brief description of the project.</p>
+                            <h5 class="card-title">Premier League Stats</h5>
+                            <p class="card-text">A comprehensive statistical analysis of the 2022/2023 Premier League</p>
                         </div>
                     </div>
                 </div>
@@ -155,14 +125,4 @@
             </form>
         </div>
     </section>
-
-    <footer class="bg-dark text-white text-center py-4">
-        <div class="container">
-            <p>&copy; 2024 My Personal Website</p>
-        </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+{% endblock content %}
