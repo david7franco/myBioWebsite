@@ -24,10 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-m+-#l01&%aqq%xp_1pj9k9sxho)tnjn&7o06&)49w$pnz0kp(t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['https://davidandrewfranco.com/', 'davidandrewfranco.com', 'www.davidandrewfranco.com', 'your_mini_pc_ip', 'localhost', '127.0.0.1', '192.168.1.198']
 
 # Application definition
 
@@ -38,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bootstrap5',
+    "django_bootstrap5",
     'myBio',
 
 ]
@@ -51,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -130,6 +130,7 @@ EMAIL_USE_TLS = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [BASE_DIR / 'myBio/static']
 
 # Default primary key field type

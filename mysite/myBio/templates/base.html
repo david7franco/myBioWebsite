@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load django_bootstrap5 %}
 <html lang="en">
 <head>
     <link rel="icon" type="image/x-icon" href="{% static 'pictures/favicon.ico' %}">
@@ -9,58 +10,65 @@
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    
+    {% block head %}
+    {% endblock head %}
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg custom-navbar">
-        <a class="navbar-brand text-white" href="#">Follow me on </a>
-        <a href="https://www.linkedin.com/in/david-franco-36735223b/" target="_blank" class="btn btn-outline-primary mx-2">
-            <i class="bi bi-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://github.com/david7franco" target="_blank" class="btn btn-outline-dark mx-2">
-            <i class="bi bi-github"></i> GitHub
-        </a>
-        <a href="https://www.instagram.com/david_franco.7" target="_blank" class="btn btn-outline-danger mx-2">
-            <i class="bi bi-instagram"></i> Instagram
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link text-white" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="{% url 'about' %}">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="{% url 'contact' %}">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="{% url 'resume' %}">Resume</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <div class="d-flex flex-column min-vh-100">
+        <nav class="navbar navbar-expand-lg custom-navbar">
+            <a class="navbar-brand text-white" href="#">Follow me on </a>
+            <a href="https://www.linkedin.com/in/david-franco-36735223b/" target="_blank" class="btn btn-outline-primary mx-2">
+                <i class="bi bi-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/david7franco" target="_blank" class="btn btn-outline-dark mx-2">
+                <i class="bi bi-github"></i> GitHub
+            </a>
+            <a href="https://www.instagram.com/david_franco.7" target="_blank" class="btn btn-outline-danger mx-2">
+                <i class="bi bi-instagram"></i> Instagram
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'resume' %}">Resume</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-    <body>
-        {% block content %}
+        <main class="flex-grow-1">
+            {% block content %}
+            {% endblock content %}
+        </main>
 
-        {% endblock content %}
-    </body>
-
-    <footer class="bg-dark text-white text-center py-4 custom-footer">
-        <div class="container">
-            <p>&copy; 2024 My Personal Website</p>
-        </div>
-    </footer>
+        <footer class="bg-dark text-white text-center py-4 custom-footer">
+            <div class="container">
+                <p>&copy; 2024 My Personal Website</p>
+            </div>
+        </footer>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    {% block scripts %}
+    {% endblock scripts %}
 </body>
 </html>

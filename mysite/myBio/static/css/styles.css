@@ -9,11 +9,16 @@
     color: #e0e0e0 !important; 
 }
 
-body {
-    background: linear-gradient(to right, #0B0C10, #1F2833); 
-    color: #e0e0e0;
+html, body {
+    height: 100%;
 }
 
+body {
+    display: flex;
+    background: linear-gradient(to right, #0B0C10, #1F2833); 
+    color: #e0e0e0;
+    flex-direction: column;
+}
 
 header {
     background: linear-gradient(to right, #0B0C10, #1F2833); 
@@ -78,6 +83,8 @@ section.bg-light h2::after {
 .custom-footer {
     background: linear-gradient(to right, #0B0C10, #000000);
     box-shadow: 5px 5px 10px rgb(255, 255, 255);
-    position: relative;
-    z-index: 2;
+}
+
+.main-content {
+    flex: 1;
 }
